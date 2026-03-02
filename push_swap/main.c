@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/01 17:03:49 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/02 10:54:38 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ int	main(int argc, char **args)
 		i++;
 	}
 	//sa(&stack_a);
-	pb(&stack_a,&stack_b);
-	pa(&stack_a,&stack_b);
+	//pb(&stack_a,&stack_b);
+	//pa(&stack_a,&stack_b);
+	ra(&stack_a);
 	while (stack_a)
 	{
 		printf("%d\n", (int)stack_a->content);
