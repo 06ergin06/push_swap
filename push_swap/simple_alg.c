@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:18:04 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/04 15:58:09 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/04 23:40:18 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,10 @@ void	selection_sort(t_list **stack_a)
 		sa(stack_a);
 		count++;
 	}
-	i = stack_len(&stack_b);
-	while (i > 0)
+	while (stack_b)
 	{
 		pa(stack_a, &stack_b);
 		count++;
-		i--;
 	}
 	printf("İşlem sayısı : %d\n", count);
 }
