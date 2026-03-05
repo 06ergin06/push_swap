@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:59:50 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/05 00:08:53 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/05 21:31:54 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,45 +81,45 @@ int	stack_max(t_list **stack)
 
 void bubble_sort_array(int *arr, int len)
 {
-    int i;
-    int tmp;
+	int i;
+	int tmp;
 
-    while (len > 0)
-    {
-        i = 0;
-        while (i < len - 1)
-        {
-            if (arr[i] > arr[i + 1])
-            {
-                tmp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = tmp;
-            }
-            i++;
-        }
-        len--;
-    }
+	while (len > 0)
+	{
+		i = 0;
+		while (i < len - 1)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				tmp = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = tmp;
+			}
+			i++;
+		}
+		len--;
+	}
 }
 
 int get_median(t_list **stack)
 {
-    t_list  *tmp;
-    int     *arr;
-    int     len;
-    int     i;
-    int     median;
+	t_list	*tmp;
+	int		*arr;
+	int		len;
+	int		i;
+	int		median;
 
-    len = stack_len(stack);
-    arr = (int *)malloc(sizeof(int) * len);
-    tmp = *stack;
-    i = 0;
-    while (tmp)
-    {
-        arr[i++] = tmp->content;
-        tmp = tmp->next;
-    }
-    bubble_sort_array(arr, len);
-    median = arr[len / 2];
-    free(arr);
-    return (median);
+	len = stack_len(stack);
+	arr = (int *)malloc(sizeof(int) * len);
+	tmp = *stack;
+	i = 0;
+	while (tmp)
+	{
+		arr[i++] = tmp->content;
+		tmp = tmp->next;
+	}
+	bubble_sort_array(arr, len);
+	median = arr[len / 2];
+	free(arr);
+	return (median);
 }

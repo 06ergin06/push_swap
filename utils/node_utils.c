@@ -6,13 +6,13 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:35:48 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/01 15:44:37 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/05 21:32:20 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list  *create_node(int content)
+t_list	*create_node(int content)
 {
 	t_list  *new_node;
 
