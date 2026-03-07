@@ -6,11 +6,11 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 11:16:59 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/02 11:38:41 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/07 22:03:36 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 double	compute_disorder(t_list **stack)
 {

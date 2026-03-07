@@ -6,11 +6,11 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:59:50 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/05 21:31:54 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/07 22:03:36 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	stack_len(t_list **stack)
 {

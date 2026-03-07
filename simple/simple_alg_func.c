@@ -6,11 +6,11 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:18:04 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/05 13:09:09 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/07 22:03:08 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void rotate_to_top_a(t_list **stack, int i)
 {

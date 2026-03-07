@@ -6,11 +6,11 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 16:33:41 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/01 16:50:04 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/07 22:03:36 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static t_list	*ft_lstlast(t_list *lst)
 {

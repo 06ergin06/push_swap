@@ -6,11 +6,11 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:18:04 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/05 21:32:05 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/07 22:03:36 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	selection_sort(t_list **stack_a)
 {
