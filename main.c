@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/08 23:24:37 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 00:29:06 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,13 @@ int	main(int argc, char **args)
 	printf("%d\n", stack_min(&stack_a));
 	//rra(&stack_a);
 	//printf("%f", compute_disorder(&stack_a));
-	radix_sort(&stack_a);
+	//radix_sort(&stack_a);
+	selection_sort(&stack_a);
 	//printf("a : \n");
 	//while (stack_a)
 	//{
-	//	printf("%d\n", (int)stack_a->content);
-	//	stack_a = stack_a->next;
+		//printf("%d\n", (int)stack_a->content);
+		//stack_a = stack_a->next;
 	//}
 	return (0);
 }
