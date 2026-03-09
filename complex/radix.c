@@ -6,11 +6,12 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/08 21:55:29 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/08 23:19:15 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 10:50:52 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+#include <stdio.h> // SİLİNECEK
 
 static int	max_idx_bit (int x)
 {
@@ -58,9 +59,11 @@ void	radix_sort(t_list **stack_a)
 	int	max_idx;
 	t_list *stack_b;
 	int	i;
+	int cnt;
 	int	cur_stack_a_len;
 	
 	i = 0;
+	cnt = 0;
 	stack_b = NULL;
 	assign_idx(stack_a);
 	max_idx = max_idx_bit(stack_len(stack_a) - 1);
@@ -69,15 +72,16 @@ void	radix_sort(t_list **stack_a)
 		cur_stack_a_len = stack_len(stack_a);
 		while (cur_stack_a_len > 0)
 		{
-			if ((((*stack_a)->index >> i) & 1))
-				ra(stack_a);
+			if (((*stack_a)->index >> i) & 1)
+				ra(stack_a, &cnt);
 			else
-				pb(stack_a, &stack_b);
+				pb(stack_a, &stack_b, &cnt);
 			cur_stack_a_len--;
 		}
 		while (stack_b != NULL) {
-			pa(stack_a, &stack_b);
+			pa(stack_a, &stack_b, &cnt);
 		}
 		i++;
 	}
+	printf("Radix Sort İşlem Sayısı : %d\n", cnt);
 }

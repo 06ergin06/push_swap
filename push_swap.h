@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:17 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/08 23:00:38 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 10:39:20 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,17 @@ typedef struct s_node
 void	append_node(t_list **stack, int value);
 
 // operations
-void	sa(t_list **stack_a);
-void	sb(t_list **stack_b);
-void	ss(t_list **stack_a,t_list **stack_b);
-void	pa(t_list **stack_a, t_list **stack_b);
-void	pb(t_list **stack_a, t_list **stack_b);
-void	ra(t_list **stack_a);
-void	rb(t_list **stack_b);
-void	rr(t_list **stack_a, t_list **stack_b);
-void	rra(t_list **stack_a);
-void	rrb(t_list **stack_b);
-void	rrr(t_list **stack_a, t_list **stack_b);
+void	sa(t_list **stack_a, int *cnt);
+void	sb(t_list **stack_b, int *cnt);
+void	ss(t_list **stack_a,t_list **stack_b, int *cnt);
+void	pa(t_list **stack_a, t_list **stack_b, int *cnt);
+void	pb(t_list **stack_a, t_list **stack_b, int *cnt);
+void	ra(t_list **stack_a, int *cnt);
+void	rb(t_list **stack_b, int *cnt);
+void	rr(t_list **stack_a, t_list **stack_b, int *cnt);
+void	rra(t_list **stack_a, int *cnt);
+void	rrb(t_list **stack_b, int *cnt);
+void	rrr(t_list **stack_a, t_list **stack_b, int *cnt);
 
 // disorder metric
 double	compute_disorder(t_list **stack);
@@ -62,10 +62,10 @@ void	selection_sort(t_list **stack_a);
 void	radix_sort(t_list **stack_a);
 
 //simple
-void min_max_parse(t_list **stack_a, t_list **stack_b);
-void sort_a_to_b(t_list **stack_a, t_list **stack_b);
-void sort_b_to_a(t_list **stack_a, t_list **stack_b);
-void rotate_to_top_a(t_list **stack_a, int i);
-void rotate_to_top_b(t_list **stack_b, int target_idx);
+void min_max_parse(t_list **stack_a, t_list **stack_b, int *cnt);
+void sort_a_to_b(t_list **stack_a, t_list **stack_b, int *cnt);
+void sort_b_to_a(t_list **stack_a, t_list **stack_b, int *cnt);
+void rotate_to_top_a(t_list **stack_a, int i, int *cnt);
+void rotate_to_top_b(t_list **stack_b, int target_idx, int *cnt);
 
 #endif
