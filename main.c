@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/09 11:16:44 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 11:27:30 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int	main(int argc, char **args)
 	disorder = compute_disorder(&stack_a);
 	if (mode == 1)
 		selection_sort(&stack_a);
+	else if (mode == 2)
+		printf("medium\n");
 	else if (mode == 3)
 		radix_sort(&stack_a);
 	else if (mode == 0)
