@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:59:50 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/07 22:03:36 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 14:27:36 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	stack_len(t_list **stack)
 {
-	int	len;
+	int		len;
 	t_list	*tmp;
 
 	len = 0;
@@ -29,10 +29,10 @@ int	stack_len(t_list **stack)
 
 int	stack_min(t_list **stack)
 {
-	t_list *tmp;
-	int	min;
-	int	i;
-	int	index;
+	t_list	*tmp;
+	int		min;
+	int		i;
+	int		index;
 
 	if (!(*stack))
 		return (0);
@@ -55,10 +55,10 @@ int	stack_min(t_list **stack)
 
 int	stack_max(t_list **stack)
 {
-	t_list *tmp;
-	int	max;
-	int	i;
-	int	index;
+	t_list	*tmp;
+	int		max;
+	int		i;
+	int		index;
 
 	if (!(*stack))
 		return (0);
@@ -79,10 +79,10 @@ int	stack_max(t_list **stack)
 	return (index);
 }
 
-void bubble_sort_array(int *arr, int len)
+void	bubble_sort_array(int *arr, int len)
 {
-	int i;
-	int tmp;
+	int	i;
+	int	tmp;
 
 	while (len > 0)
 	{
@@ -101,7 +101,7 @@ void bubble_sort_array(int *arr, int len)
 	}
 }
 
-int get_median(t_list **stack)
+int	get_median(t_list **stack)
 {
 	t_list	*tmp;
 	int		*arr;

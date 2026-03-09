@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 11:16:59 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/07 22:03:36 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 14:26:12 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ double	compute_disorder(t_list **stack)
 	mistakes = 0;
 	total_pairs = 0;
 	cur = *stack;
-	while (cur != NULL) {
+	while (cur != NULL)
+	{
 		comp = cur->next;
-		while (comp != NULL) {
+		while (comp != NULL)
+		{
 			total_pairs++;
 			if ((int)cur->content > (int)comp->content)
 				mistakes++;

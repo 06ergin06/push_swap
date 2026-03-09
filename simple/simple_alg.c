@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/04 13:18:04 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/09 10:53:57 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 14:25:17 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	selection_sort(t_list **stack_a)
 {
 	t_list	*stack_b;
-	int cnt;
+	int		cnt;
 
 	cnt = 0;
 	stack_b = NULL;

@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:46:36 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/09 11:09:48 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 14:26:31 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(res * sign));
 }
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

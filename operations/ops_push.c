@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 16:29:11 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/09 10:51:52 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 14:14:23 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static void	push(t_list **stack_src, t_list **stack_dst)
 {
 	t_list	*tmp;
-	if(!stack_src)
-		return ;
 
+	if (!stack_src)
+		return ;
 	tmp = *stack_src;
 	*stack_src = (*stack_src)->next;
 	tmp->next = NULL;

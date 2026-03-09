@@ -6,17 +6,17 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/08 21:55:29 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/09 11:37:52 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/09 14:13:06 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 #include <stdio.h> // SİLİNECEK
 
-static int	max_idx_bit (int x)
+static int	max_idx_bit(int x)
 {
 	int	res;
-	
+
 	res = 0;
 	while (x != 0)
 	{
@@ -30,9 +30,9 @@ static void	assign_idx(t_list **stack_a)
 {
 	t_list	*tmp;
 	t_list	*min_node;
-	int	len;
-	int	i;
-	
+	int		len;
+	int		i;
+
 	i = 0;
 	len = stack_len(stack_a);
 	while (i < len)
@@ -56,12 +56,12 @@ static void	assign_idx(t_list **stack_a)
 
 void	radix_sort(t_list **stack_a)
 {
-	int	max_idx;
-	t_list *stack_b;
-	int	i;
-	int cnt;
-	int	cur_stack_a_len;
-	
+	int		max_idx;
+	t_list	*stack_b;
+	int		i;
+	int		cnt;
+	int		cur_stack_a_len;
+
 	i = 0;
 	cnt = 0;
 	stack_b = NULL;
