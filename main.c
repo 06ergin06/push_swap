@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/03/12 13:00:04 by iergin           ###   ########.fr       */
+/*   Updated: 2026/03/12 14:08:38 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ int	main(int argc, char **args)
 			mode = 1;
 			i = 2;
 		}
-		else if (ft_strncmp(args[1], "--complex", 10) == 0)
-		{
-			mode = 3;
-			i = 2;
-		}
 		else if (ft_strncmp(args[1], "--medium", 9) == 0)
 		{
 			mode = 2;
+			i = 2;
+		}
+		else if (ft_strncmp(args[1], "--complex", 10) == 0)
+		{
+			mode = 3;
 			i = 2;
 		}
 		else if (ft_strncmp(args[1], "--adaptive", 11) == 0)
@@ -74,11 +74,11 @@ int	main(int argc, char **args)
 		else if (disorder > 0.5)
 			radix_sort(&stack_a);
 	}
-	printf("a : \n");
-	while (stack_a)
-	{
-		printf("%d\n", (int)stack_a->content);
-		stack_a = stack_a->next;
-	}
+	//printf("a : \n");
+	//while (stack_a)
+	//{
+	//	printf("%d\n", (int)stack_a->content);
+	//	stack_a = stack_a->next;
+	//}
 	return (0);
 }
