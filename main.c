@@ -6,11 +6,12 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/12 17:53:05 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/13 15:47:28 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 static void	select_mode(char *arg, int *mode, int *i)
 {
@@ -36,22 +37,22 @@ static void	select_mode(char *arg, int *mode, int *i)
 	}
 }
 
-static void	select_sort(t_stack *stack_a, int *mode, double disorder)
+static void	select_sort(t_stack **stack_a, int *mode, double disorder)
 {
 	if (*mode == 1)
-		selection_sort(&stack_a);
+		selection_sort(stack_a);
 	else if (*mode == 2)
-		k_sort(&stack_a);
+		k_sort(stack_a);
 	else if (*mode == 3)
-		radix_sort(&stack_a);
+		radix_sort(stack_a);
 	else if (*mode == 0)
 	{
 		if (disorder != 0 && disorder < 0.2)
-			selection_sort(&stack_a);
+			selection_sort(stack_a);
 		else if (disorder >= 0.2 && disorder < 0.5)
-			k_sort(&stack_a);
+			k_sort(stack_a);
 		else if (disorder >= 0.5)
-			radix_sort(&stack_a);
+			radix_sort(stack_a);
 	}
 }
 
@@ -80,6 +81,7 @@ int	main(int argc, char **args)
 	int		i;
 	int		mode;
 	double	disorder;
+	int		err;
 
 	if (argc == 1 || (argc == 2 && !args[1][0]))
 		return (0);
@@ -88,9 +90,10 @@ int	main(int argc, char **args)
 	stack_a = NULL;
 	if (argc > 1)
 		select_mode(args[1], &mode, &i);
-	fill_stack(&stack_a, argc, args, i);
+	err = fill_stack(&stack_a, argc, args, i);
 	disorder = compute_disorder(&stack_a);
-	select_sort(stack_a, &mode, disorder);
+	if (err)
+		select_sort(&stack_a, &mode, disorder);
 	ft_lstclear(&stack_a);
 	return (0);
 }
