@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:17 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/17 16:52:23 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/17 17:15:21 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	ft_lstclear(t_stack **lst);
 int		simple_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_bzero(void *s, size_t n);
-
+void	ft_putstr_fd(char *s, int fd);
 
 //sort utils
 int		stack_len(t_stack **stack);

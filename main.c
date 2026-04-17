@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/17 16:58:48 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/17 17:30:05 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,30 +75,30 @@ static int	fill_stack(t_stack **stack_a, int argc, char **args, int i)
 static void	print_strategy(int mode, double disorder, int len)
 {
 	if (mode % 10 == 1)
-		printf("[bench] strategy: Simple / O(n^2)\n");
+		fprintf(stderr,"[bench] strategy: Simple / O(n^2)\n");
 	else if (mode % 10 == 2)
-		printf("[bench] strategy: Medium / O(n√n)\n");
+		fprintf(stderr,"[bench] strategy: Medium / O(n√n)\n");
 	else if (mode % 10 == 3)
-		printf("[bench] strategy: Complex / O(n log n)\n");
+		fprintf(stderr,"[bench] strategy: Complex / O(n log n)\n");
 	else if (mode % 10 == 0)
 	{
 		if (disorder < 0.2 || len <= 5)
-			printf("[bench] strategy: Adaptive / O(n^2)\n");
+			fprintf(stderr,"[bench] strategy: Adaptive / O(n^2)\n");
 		else if (disorder >= 0.2 && disorder < 0.5)
-			printf("[bench] strategy: Adaptive / O(n√n)\n");
+			fprintf(stderr,"[bench] strategy: Adaptive / O(n√n)\n");
 		else
-			printf("[bench] strategy: Adaptive / O(n log n)\n");
+			fprintf(stderr,"[bench] strategy: Adaptive / O(n log n)\n");
 	}
 }
 
 static void	benchmark(int mode, double disorder, int len, t_bench *bench)
 {
-	printf("[bench] disorder: %.2f%%\n", disorder * 100);
+	fprintf(stderr ,"[bench] disorder: %.2f%%\n", disorder * 100);
 	print_strategy(mode, disorder, len);
-	printf("[bench] total_ops: %d\n", bench->total_ops);
-	printf("[bench] sa: %d sb: %d ss: %d pa: %d pb: %d\n", 
+	fprintf(stderr ,"[bench] total_ops: %d\n", bench->total_ops);
+	fprintf(stderr ,"[bench] sa: %d sb: %d ss: %d pa: %d pb: %d\n", 
 		bench->sa, bench->sb, bench->ss, bench->pa, bench->pb);
-	printf("[bench] ra: %d rb: %d rr: %d rra: %d rrb: %d rrr: %d\n",
+	fprintf(stderr, "[bench] ra: %d rb: %d rr: %d rra: %d rrb: %d rrr: %d\n",
 		bench->ra, bench->rb, bench->rr, bench->rra, bench->rrb, bench->rrr);
 }
 
