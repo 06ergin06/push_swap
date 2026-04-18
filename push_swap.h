@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:17 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/18 15:27:08 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/18 22:05:36 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_lstadd_front(t_stack **lst, t_stack *new_node);
 void	ft_lstclear(t_stack **lst);
 
 // libft utils
-int		simple_atoi(const char *str);
+int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *s, int fd);

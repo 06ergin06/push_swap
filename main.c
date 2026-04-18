@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/18 16:17:01 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/18 22:05:18 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	fill_stack(t_stack **stack_a, int argc, char **args, int i)
 
 	while (i < argc)
 	{
-		num = simple_atoi(args[i]);
+		num = ft_atoi(args[i]);
 		if (!(has_available(*stack_a, num) && num != -1
 				&& append_node(stack_a, num)))
 		{

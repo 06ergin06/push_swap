@@ -6,11 +6,23 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 12:54:05 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/18 21:27:46 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/18 23:37:45 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+static	int	ft_sqrt(int number)
+{
+	int	i;
+
+	if (number < 4)
+		return (1);
+	i = 2;
+	while (i * i < number)
+		i++;
+	return (i);
+}
 
 static	void	k_sort_a_to_b(t_stack **stack_a, t_stack **stack_b, t_bench *b)
 {
@@ -18,9 +30,7 @@ static	void	k_sort_a_to_b(t_stack **stack_a, t_stack **stack_b, t_bench *b)
 	int	range;
 
 	i = 0;
-	range = 15;
-	if (stack_len(stack_a) > 100)
-		range = 35;
+	range = ft_sqrt(stack_len(stack_a)) * 2;
 	while (*stack_a)
 	{
 		if ((*stack_a)->index <= i)
