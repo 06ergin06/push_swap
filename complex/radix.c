@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/08 21:55:29 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/18 15:35:54 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/18 21:38:50 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	radix_sort(t_stack **stack_a, t_bench *b)
 
 	i = 0;
 	stack_b = NULL;
+	if (!stack_a || !*stack_a || !(*stack_a)->next)
+		return ;
 	assign_index(stack_a);
 	while (i < max_idx_bit(stack_len(stack_a) - 1))
 	{
