@@ -1,0 +1,1 @@
+- printf içni stdio.h'dan kurtulcaz.
