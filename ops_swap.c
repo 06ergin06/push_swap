@@ -6,11 +6,11 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 16:09:41 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/18 15:26:43 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/19 22:05:52 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 static void	swap(t_stack **stack)
 {
@@ -29,7 +29,8 @@ static void	swap(t_stack **stack)
 void	sa(t_stack **stack_a, t_bench *b)
 {
 	swap(stack_a);
-	write(1, "sa\n", 3);
+	if (b == NULL || b->ico == 0)
+		write(1, "sa\n", 3);
 	if (b != NULL)
 	{
 		b->sa++;
@@ -40,7 +41,8 @@ void	sa(t_stack **stack_a, t_bench *b)
 void	sb(t_stack **stack_b, t_bench *b)
 {
 	swap(stack_b);
-	write(1, "sb\n", 3);
+	if (b == NULL || b->ico == 0)
+		write(1, "sb\n", 3);
 	if (b != NULL)
 	{
 		b->sb++;
@@ -52,7 +54,8 @@ void	ss(t_stack **stack_a, t_stack **stack_b, t_bench *b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	write(1, "ss\n", 3);
+	if (b == NULL || b->ico == 0)
+		write(1, "ss\n", 3);
 	if (b != NULL)
 	{
 		b->ss++;

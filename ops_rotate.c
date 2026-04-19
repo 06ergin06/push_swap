@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ops_push.c                                         :+:      :+:    :+:   */
+/*   ops_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/01 16:29:11 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/19 17:39:08 by iergin           ###   ########.fr       */
+/*   Created: 2026/03/02 10:44:42 by iergin            #+#    #+#             */
+/*   Updated: 2026/04/19 22:05:52 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_stack **stack_src, t_stack **stack_dst)
+static void	rotate(t_stack **stack_src)
 {
 	t_stack	*tmp;
 
@@ -21,29 +21,42 @@ static void	push(t_stack **stack_src, t_stack **stack_dst)
 	tmp = *stack_src;
 	*stack_src = (*stack_src)->next;
 	tmp->next = NULL;
-	ft_lstadd_front(stack_dst, tmp);
+	ft_lstadd_back(stack_src, tmp);
 }
 
-void	pa(t_stack **stack_a, t_stack **stack_b, t_bench *b)
+void	ra(t_stack **stack_a, t_bench *b)
 {
-	push(stack_b, stack_a);
-	if (b->ico == 0)
-		write(1, "pa\n", 3);
+	rotate(stack_a);
+	if (b == NULL || b->ico == 0)
+		write(1, "ra\n", 3);
 	if (b != NULL)
 	{
-		b->pa++;
+		b->ra++;
 		b->total_ops++;
 	}
 }
 
-void	pb(t_stack **stack_a, t_stack **stack_b, t_bench *b)
+void	rb(t_stack **stack_b, t_bench *b)
 {
-	push(stack_a, stack_b);
-	if (b->ico == 0)
-		write(1, "pb\n", 3);
+	rotate(stack_b);
+	if (b == NULL || b->ico == 0)
+		write(1, "rb\n", 3);
 	if (b != NULL)
 	{
-		b->pb++;
+		b->rb++;
+		b->total_ops++;
+	}
+}
+
+void	rr(t_stack **stack_a, t_stack **stack_b, t_bench *b)
+{
+	rotate(stack_a);
+	rotate(stack_b);
+	if (b == NULL || b->ico == 0)
+		write(1, "rr\n", 3);
+	if (b != NULL)
+	{
+		b->rr++;
 		b->total_ops++;
 	}
 }

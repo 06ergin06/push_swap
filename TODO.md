@@ -1,2 +1,1 @@
 - printf içni stdio.h'dan kurtulcaz.
-- k-sort için köklü bir range seçimi üzerine bakıcaz

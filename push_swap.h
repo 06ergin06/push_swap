@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:17 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/18 22:05:36 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/19 17:36:25 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ typedef struct s_stack
 
 typedef struct s_bench
 {
+	int				strategy;
+	int				is_bench;
+	int				ico;
 	int				sa;
 	int				sb;
 	int				ss;
