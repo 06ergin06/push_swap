@@ -15,6 +15,7 @@ SRCS		= main.c \
 			  sort_utils.c \
 			  disorder.c \
 			  print.c \
+			  ft_split.c \
 			  k_sort.c \
 			  radix.c
 

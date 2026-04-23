@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/23 14:30:00 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/23 15:06:38 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,20 +59,37 @@ static void	select_sort(t_stack **stack_a, int str, double dorder, t_bench *b)
 
 static int	fill_stack(t_stack **stack_a, int argc, char **args, int i)
 {
-	int	num;
-	int	err;
+	int		num;
+	int		err;
+	char	**split_args;
+	int		j;
 
 	while (i < argc)
 	{
-		err = 0;
-		num = strict_atoi(args[i], &err);
-		if (err || !has_available(*stack_a, num)
-			|| !append_node(stack_a, num))
+		split_args = ft_split(args[i], ' ');
+		if (!split_args || !split_args[0])
 		{
 			write(2, "Error\n", 6);
 			ft_lstclear(stack_a);
+			free_split(split_args);
 			return (0);
 		}
+		j = 0;
+		while (split_args[j])
+		{
+			err = 0;
+			num = strict_atoi(split_args[j], &err);
+			if (err || !has_available(*stack_a, num) ||
+				!append_node(stack_a, num))
+			{
+				write(2, "Error\n", 6);
+				ft_lstclear(stack_a);
+				free_split(split_args);
+				return (0);
+			}
+			j++;
+		}
+		free_split(split_args);
 		i++;
 	}
 	if (is_sorted(*stack_a))

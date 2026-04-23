@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:46:36 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/20 10:03:02 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/23 14:38:14 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ int	strict_atoi(const char *str, int *err)
 	i = 0;
 	sign = 1;
 	res = 0;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		sign = -1;
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
 	if (!str[i])
@@ -76,4 +77,19 @@ size_t	ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
+}
+
+void	free_split(char **split_arr)
+{
+	int	i;
+
+	if (!split_arr)
+		return ;
+	i = 0;
+	while (split_arr[i])
+	{
+		free(split_arr[i]);
+		i++;
+	}
+	free(split_arr);
 }

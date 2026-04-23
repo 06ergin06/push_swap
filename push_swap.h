@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:17 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/22 22:49:43 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/23 14:37:44 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	ft_lstclear(t_stack **lst);
 int		strict_atoi(const char *str, int *err);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_bzero(void *s, size_t n);
+size_t	ft_strlen(const char *s);
 
 //sort utils
 int		stack_len(t_stack **stack);
@@ -86,5 +87,9 @@ void	radix_sort(t_stack **stack_a, t_bench *b);
 
 //print
 void	ft_printf(int fd, const char *format, ...);
+
+//split 
+char	**ft_split(char const *s, char c);
+void	free_split(char **split_arr);
 
 #endif
