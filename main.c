@@ -6,7 +6,7 @@
 /*   By: iergin <iergin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/01 15:28:15 by iergin            #+#    #+#             */
-/*   Updated: 2026/04/22 22:51:10 by iergin           ###   ########.fr       */
+/*   Updated: 2026/04/23 14:30:00 by iergin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ static void	select_mode(char **args, t_bench *b, int *i)
 			b->strategy = 0;
 		else if (ft_strncmp(args[*i], "--bench", 8) == 0)
 			b->is_bench = 1;
+		else
+		{
+			write(2, "Error\n", 6);
+			exit(1);
+		}
 		(*i)++;
 	}
 }
@@ -111,7 +116,7 @@ int	main(int argc, char **args)
 	int		i;
 	double	dorder;
 
-	if (argc == 1 || (argc == 2 && !args[1][0]))
+	if (argc == 1)
 		return (0);
 	ft_bzero(&tb, sizeof(t_bench));
 	i = 1;
